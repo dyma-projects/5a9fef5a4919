@@ -1,0 +1,33 @@
+<h1 [style.text-align]="titre.length > 2 ? 'center' : 'left' ">{{titre}}</h1>
+
+
+Entrez le titre de la page
+<input [type]='type' [(ngModel)]='titre'  />
+
+
+
+
+<p><button (click)='changeStatus()'>Texte de votre choix</button></p>
+
+<p *ngIf="status">P1</p>
+<p *ngIf="!status">P2</p>
+
+
+
+<ul>  
+    <li *ngFor="let text of texts" >{{text}}</li>
+</ul>
+
+
+
+<button *ngIf="!alarm" (click)='enableAlarm()'>Activer l'alarme</button>
+<button *ngIf="alarm" (click)='disabledAlarm()'>Désactiver l'alarme</button>
+
+
+    <div [ngStyle]="dangerousStyles"
+        (mouseenter)="zoneDanger($event)" >
+        
+    
+        <p>{{danger}}</p>
+        
+    </div>
