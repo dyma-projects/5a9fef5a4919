@@ -22,7 +22,7 @@ export class DirectiveComponent implements OnInit {
           'margin': this.alarm      ? '300px 250px 250px 250px' : '300px 250px 250px 250px',
           'padding': this.alarm      ? '10px 10px 10px 10px' : '44px 10px 10px 10px',
           'border-style': 'dashed solid',
-          'text-align':'center';        
+          'text-align':'center'       
         };
       }
  
